@@ -1,9 +1,9 @@
-
+// File Imports
 import React, { Component } from 'react';
 import FabricCanvas from './components/FabricCanvas';
 import TemplateList from './components/TemplateList'
 import {bglist, facelist, eyeslist, faciallist, hairlist} from './images/templates/templatelist';
-import {Col, Tabs, Tab } from 'react-bootstrap';
+import {Col, Tabs, Tab, Jumbotron, Button } from 'react-bootstrap';
 import './App.css';
 import {fabric} from 'fabric';
 
@@ -30,15 +30,15 @@ class App extends Component {
 
   }
 
-
-
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Avatar Maker</h1>
-          <p> Make your own Avatar with React and Fabric.js </p>
-        </header>
+
+      <Jumbotron>
+        <h1>Avatar Maker</h1>
+        <p>Make your own Avatar with React and Fabric.js</p>
+      </Jumbotron>
+
         <div className="main">
           <div className="row">
 
@@ -56,14 +56,12 @@ class App extends Component {
                 </Tab>
                 <Tab eventKey={2} title="Eyes">
 
-                  
                   <TemplateList 
                     data = {eyeslist}
                     property_type= "eyes"
                     zIndex = {2}
                     addtocanvas ={this.addToCanvas}
                   />
-
 
                 </Tab>
                 <Tab eventKey={3} title="Beard">
@@ -101,22 +99,15 @@ class App extends Component {
             
             <Col md={6}>
 
-
               <FabricCanvas 
                 activeProperty = {this.state.activeProperty}
               />
-              
-              
+            
             </Col>
 
           </div>
-
         </div>
-          
-       
       </div>
-      
-
     );
   }
 }

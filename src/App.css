@@ -23,40 +23,26 @@ body {
   box-shadow: 0 0 26px rgba(0, 0, 0, .13);
 }
 
-header{
+.jumbotron{
   text-align: center;
+  color:white;
   background:url(./images/header-bg.jpg) no-repeat;
   background-size: cover;
 }
 
-h1,
-p,
-form button {
-  color: white;
-}
-
 
 h1 {
-  
   text-shadow: 5px 3px 15px rgba(0, 0, 0, .8);
   line-height: .65;
   margin-top: .5em;
   font-weight: bold;
   
 }
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 0.35em;
-}
-
 p {
-  font-size: 1.1em;
+  font-size: 0.7em;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
 }
 
-
-/* Bootstrap Modifications*/
 .nav-tabs{
   margin-bottom:15px;
 }
@@ -72,32 +58,13 @@ p {
 
 }
 
-
-/* For Phones */
-@media (max-width: 769px){
-  header {
-    padding: 1.25em;
-  }
-  h1 {
-    font-size: 3.0em;
-    margin: .3em 0 0;
-  }
+.main {
+    padding: 1em 2em 2em 2em;
 }
 
 @media (min-width: 769px) {
-  header {
+  .jumbotron {
     height: 200px;
-    padding: 2.5em 1em 1em;
   }
-  h1 {
-    font-size: 5.8em;
-  }
-  h2 {
-    font-size: 1.95em;
-  }
-  .main {
-    padding: 2em 2em 2em 2em;
 
-    
-  }
 }

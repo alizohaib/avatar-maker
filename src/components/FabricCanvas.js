@@ -5,16 +5,6 @@ import {Button} from 'react-bootstrap';
 
 class FabricCanvas extends React.Component{
 
-	constructor(props){
-
-		super(props);
-
-		this.state = {
-			isCanvasLoading: false 
-		}
-		
-	}
-	
 	componentDidMount(){
 
 		// Make a New Canvas
@@ -23,10 +13,7 @@ class FabricCanvas extends React.Component{
 			height:375,
 			width:375,
 		});
-
-		
 	}
-
 
 	componentWillReceiveProps = (newprops) =>{
 
@@ -37,13 +24,11 @@ class FabricCanvas extends React.Component{
 		}
 	}
 
-
 	updateCanvasforImage = (prev,next) => {
 
 		if(next){
 
 			let to_remove;
-
 			// Find the same kind of element
 			this.the_canvas.forEachObject( (object) => {
 
@@ -62,11 +47,8 @@ class FabricCanvas extends React.Component{
 
 			this.the_canvas.add(next);
 			this.the_canvas.moveTo(next, next.zIndex);
-
 		}
-
 	}
-
 
 	saveToCanvas = () => {
 
@@ -77,20 +59,10 @@ class FabricCanvas extends React.Component{
 
 	}
 	
-
 	render(){
-		
 		
 		return (
 			<div className= "main-canvas-container">
-				
-				{
-				this.state.isCanvasLoading ?
-					<div className="pre_loader" style={{position:'absolute',width:'270px', zIndex: 10000, top:'300px'}}>
-						<p className="text-center" style={{fontSize:'40px'}}> <i className="fa fa-spinner fa-spin"/> </p>
-					</div>
-				: null
-				}
 				
 				<canvas id= 'main-canvas'>
 				</canvas>
@@ -99,13 +71,8 @@ class FabricCanvas extends React.Component{
                 	Download Avatar
               	</Button>
 			</div>
-
-
 		);
-
 	}
 }
 
-
-// export default FabricCanvas;
 export default FabricCanvas;
