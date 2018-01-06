@@ -1,0 +1,103 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #4c4c4c;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.App {
+  width: 100%;
+  max-width: 960px;
+  margin: 2.5em auto;
+  border-radius: .35em;
+  background: #fcfcfc;
+  overflow: hidden;
+  -webkit-box-shadow: 10px 10px 26px rgba(0, 0, 0, .13);
+  box-shadow: 0 0 26px rgba(0, 0, 0, .13);
+}
+
+header{
+  text-align: center;
+  background:url(./images/header-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+h1,
+p,
+form button {
+  color: white;
+}
+
+
+h1 {
+  
+  text-shadow: 5px 3px 15px rgba(0, 0, 0, .8);
+  line-height: .65;
+  margin-top: .5em;
+  font-weight: bold;
+  
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+p {
+  font-size: 1.1em;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
+}
+
+
+/* Bootstrap Modifications*/
+.nav-tabs{
+  margin-bottom:15px;
+}
+
+/* Canvas */
+#main-canvas{
+  background: #ccc;
+  background: url('./images/bg-canvas.png');
+  background-repeat: repeat;
+  border:1px solid #ececec;
+  margin: 10px auto;
+  display: block;
+
+}
+
+
+/* For Phones */
+@media (max-width: 769px){
+  header {
+    padding: 1.25em;
+  }
+  h1 {
+    font-size: 3.0em;
+    margin: .3em 0 0;
+  }
+}
+
+@media (min-width: 769px) {
+  header {
+    height: 200px;
+    padding: 2.5em 1em 1em;
+  }
+  h1 {
+    font-size: 5.8em;
+  }
+  h2 {
+    font-size: 1.95em;
+  }
+  .main {
+    padding: 2em 2em 2em 2em;
+
+    
+  }
+}
